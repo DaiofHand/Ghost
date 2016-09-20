@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Ghost 桌面版 APP 正式发布，能同时管理多个 Ghost 博客</title>
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="app.css" />
+		<script type="text/javascript">
+			$(function() {
+				$(window).scroll(function() {
+					var t = $(this).scrollTop();
+					if(t > 300) {
+						$(".top").stop().fadeIn(1000);
+					} else {
+						$(".top").stop().fadeOut(1000);
+					}
+				})
+				$(".top").click(function() {
+					$("body,html").stop().animate({
+						scrollTop: 0
+					}, 300);
+				})
+			})
+		</script>
+	</head>
+
+	<body class="home-template">
+		<header class="main-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<a class="branding" href="index.html" title="开源博客">
+							<img src="http://static.ghostchina.com/image/b/46/4f5566c1f7bc28b3f7ac1fada8abe.png" />
+							<h2 class="text-hide">现在你看到的是由bootstrap提供的网页</h2>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<nav class="main-navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="navbar-header">
+							<span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars"></i>
+                        </span>
+								
+						</div>
+						<div class="collapse navbar-collapse" id="main-menu" aria-expanded="true" >
+							<ul class="menu">
+								<li  role="presentation">
+									<a href="index.html">首页</a>
+								</li>
+								<li role="presentation">
+									<a href="#">论坛</a>
+								</li>
+								<li role="presentation">
+									<a href="#">快捷手册</a>
+								</li>
+								<li role="presentation">
+									<a href="#">中文文档</a>
+								</li>
+								<li role="presentation">
+									<a href="#">下载</a>
+								</li>
+								<li role="presentation">
+									<a href="about.html">关于</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="conternt-wrap">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-8 main-content">
+						<article class="post tag-about-ghost tag-about-ghost-in-depth tag-zhu-shou-han-shu">
+							<div class="post-head">
+								<h1 class="post-title">
+									<a href="#">Ghost 桌面版 APP 正式发布，能同时管理多个 Ghost 博客</a>
+								</h1>
+								<div class="post-meta">
+									<span class="author">
+										作者
+										<a href="#">王赛</a>
+									</span> .
+									<time class="date" datetime="2016-08-31">2016年04月28日</time>
+
+								</div>
+							</div>
+							<div class="post-content">
+								<p>虽然通过浏览器管理 Ghost 博客虽然很方便，但是在多个 tab 之间切换有时候也会很麻烦，嗯，如果能有一个独立的 app 应该使用起来会更爽一些！</p>
+								<h3>为什么要升级 Node.js 版本？</h3>
+								<p>
+									今天的主角来了，Ghost 桌面版 APP -- Ghost Desktop！
+								</p>
+								<p>目前，Ghost Desktop 还处于早期阶段，但是已经是一个全功能版本了，并且 Ghost Desktop 运行良好，支持自动更新，已经完全支持 Mac、Windows 和 Linux 平台了。补充一下，Ghost Desktop 是<a href="#">完全开源</a>的（这还用说吗？）。</p>
+								<p>		
+其实 Ghost Desktop 于数周前就已经开放给大家预览了。</p>
+								<p>众所周知，Ghost 是一个有非盈利组织支持的开源项目。Ghost Desktop 由志愿者 Felix Rieseberg 独立开发的，并且他还是一位微软的开源布道者。</p>
+								<p>官方下载地址（且慢点击，先看下面）：<a href="#">https://ghost.org/downloads/</a></p>
+								<p>由于 <b>众所周知</b> 的原因，某些网站或服务在国内是不存在的，这其中就包括 Amazon 的云存储，悲伤的是 Github 用的就是 Amazon 的云存储，更悲伤的是 Ghost Desktop 利用的是 Github 提供的下载，说白了，你在国内还真下载不了。所以 GhostChina 把安装包搬运到墙内给大家提供一点儿方便：</p>
+								<ol>
+									<li>Windows(For Windows 7 & newer): <a href="#">http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-windows-setup.exe</a></li>
+									<li>Mac(For OS X 10.9 & newer): <a href="#">http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-osx.zip</a></li>
+									<li>Linux(For Ubuntu 64-bit):  <a href="#">http://dl.ghostchina.com/desktop/ghost-desktop-0.3.2-debian.deb</a></li>
+									
+								</ol>
+								<hr />
+							</div>
+							<div class="footer clearfix">
+								
+								<div class="pull-left tag-list">
+								<i class="fa fa-folder-open-o"></i>
+								</div>
+							</div>
+						</article>
+						<div class="col-md-12 main-content post tag-about-ghost tag-about-ghost-in-depth tag-zhu-shou-han-shu">
+							<div class="widget">
+								<p>关于作者<a href="#">王赛</a></p>
+								<span class="loaction"><i class="fa fa-home"></i>北京  </span>
+								<span class="website">
+									<i class="fa fa-globe"></i>
+									<a targer="_blank" href="http://www.bootcss.com">个人网站/博客</a>
+								</span>
+								
+							</div>
+						</div>
+					</main>
+					<aside class="col-md-4 side-bar">
+						<div class="widget">
+							<h4 class="title">社区</h4>
+							<div class="content community">
+								<p>qq群：1234568</p>
+								<p>
+									<a href="#">问答社区</a>
+								</p>
+								<p>
+									<a href="#">官网微博</a>
+								</p>
+							</div>
+
+						</div>
+						<div class="widget">
+							<h4 class="title">下载Ghost</h4>
+							<div class="content download">
+								<a href="# " class="btn btn-default btn-block">中文版0.7.4</a>
+							</div>
+
+						</div>
+						<div class="widget">
+							<h4 class="title">标签云</h4>
+							<div class="content tag-cloud">
+								<a href="#">jquery</a>
+								<a href="#">Ghost0.7版本</a>
+								<a href="#">开源</a>
+								<a href="#">助手函数</a>
+								<a href="#">标签云</a>
+								<a href="#">导航</a>
+								<a href="#">自定义页面</a>
+								<a href="#">静态页面</a>
+								<a href="#">Roon.io</a>
+								<a href="#">用户指南</a>
+							</div>
+						</div>
+					</aside>
+					
+				</div>
+			</div>
+		</section>
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="widget">
+							<h4>最新文章</h4>
+							<div class="content recent-psot">
+								<div class="recent-single-psot">
+									<a href="#" class="post-title">Node.js v4 LTS 成为 Ghost 推荐版本</a>
+									<div class="date">2016年7月26日</div>
+								</div>
+								<div class="recent-single-psot">
+									<a href="#" class="post-title">Ghost 桌面版App正式发布 能同时管理多个Ghost博客</a>
+									<div class="date">2016年4月28日</div>
+								</div>
+								<div class="recent-single-psot">
+									<a href="#" class="post-title">位Ubuntu 和 Debian 安装最新版本的Node.js</a>
+									<div class="date">2016年3月23日</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="widget">
+							<h4 class="title">标签云</h4>
+							<div class="content tag-cloud">
+								<a href="#">ghost</a>
+								<a href="#">javascript</a>
+								<a href="#">新版本发布</a>
+								<a href="#">Node.js</a>
+								<a href="#">MySQL</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="widget">
+							<h4 class="title">合作伙伴</h4>
+							<div class="content tag-cloud frend-links">
+								<a href="#">bootstrap中文网</a>
+								<a href="#">开放CDN服务</a>
+								<a href="#">Grunt中文网</a>
+								<a href="#">Glup中文网</a>
+								<a href="#">阿里云</a>
+								<a href="#">又拍云</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a href="javascript:;" class="top">∧</a>
+	</body>
+
+</html>

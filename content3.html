@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>为 Ubuntu 和 Debian 安装最新版本的 Node.js</title>
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="app.css" />
+		<script type="text/javascript">
+			$(function() {
+				$(window).scroll(function() {
+					var t = $(this).scrollTop();
+					if(t > 300) {
+						$(".top").stop().fadeIn(1000);
+					} else {
+						$(".top").stop().fadeOut(1000);
+					}
+				})
+				$(".top").click(function() {
+					$("body,html").stop().animate({
+						scrollTop: 0
+					}, 300);
+				})
+			})
+		</script>
+	</head>
+
+	<body class="home-template">
+		<header class="main-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<a class="branding" href="index.html" title="开源博客">
+							<img src="http://static.ghostchina.com/image/b/46/4f5566c1f7bc28b3f7ac1fada8abe.png" />
+							<h2 class="text-hide">现在你看到的是由bootstrap提供的网页</h2>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<nav class="main-navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="navbar-header">
+							<span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars"></i>
+                        </span>
+								
+						</div>
+						<div class="collapse navbar-collapse" id="main-menu" aria-expanded="true" >
+							<ul class="menu">
+								<li  role="presentation">
+									<a href="index.html">首页</a>
+								</li>
+								<li role="presentation">
+									<a href="#">论坛</a>
+								</li>
+								<li role="presentation">
+									<a href="#">快捷手册</a>
+								</li>
+								<li role="presentation">
+									<a href="#">中文文档</a>
+								</li>
+								<li role="presentation">
+									<a href="#">下载</a>
+								</li>
+								<li role="presentation">
+									<a href="about.html">关于</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="conternt-wrap">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-8 main-content">
+						<article class="post tag-about-ghost tag-about-ghost-in-depth tag-zhu-shou-han-shu">
+							<div class="post-head">
+								<h1 class="post-title">
+									<a href="#">为 Ubuntu 和 Debian 安装最新版本的 Node.js</a>
+								</h1>
+								<div class="post-meta">
+									<span class="author">
+										作者
+										<a href="#">王赛</a>
+									</span> .
+									<time class="date" datetime="2016-08-31">2016年03月23日</time>
+
+								</div>
+							</div>
+							<div class="post-content">
+								<p>运行 Ghost 必须要安装 Node.js。但是 Ubuntu 或 Debian 的软件仓库中的 Node.js 更新较慢，甚至只能等到新版本发布才能有最新的 Node.js 用。下面我们说一下从 NodeSource 提供的仓库中安装最新版本的 Node.js。</p>
+								<h3>支持的操作系统版本</h3>
+								<p>
+									被支持的 Ubuntu 版本：
+								</p>
+								<ul>
+									<li>Ubuntu 12.04 LTS (Precise Pangolin)</li>
+									<li>Ubuntu 14.04 LTS (Trusty Tahr)</li>
+									<li>Ubuntu 15.04 (Vivid Vervet)</li>
+									<li>Ubuntu 15.10 (Wily Werewolf) [For Node >= 4.2.x]</li>
+								</ul>
+								<p>被支持的 Debian 版本：</p>
+								<ul>
+									<li>Debian 7 (wheezy)</li>
+									<li>Debian 8 / stable (jessie)</li>
+									<li>Debian testing (stretch, aliased to jessie)</li>
+									<li>Debian unstable (sid)</li>
+								</ul>
+								<h3>安装步骤</h3>
+								<p>Ghost 目前支持 <code>0.10.*</code>、<code>0.12.*</code> 和 <code>>=4.2 &lt;5.*</code> (LTS) 版本的 Node.js，推荐的是 <code>>0.10.40 (最新版本)</code>。详细说明请看这里：<a href="#">http://support.ghost.org/supported-node-versions/ </a> </p>
+								<strong>根据我们的安装经验，推荐安装 4.x（LTS）版本的 Node.js。</strong>
+								
+								<p><strong>Ubuntu 系统</strong></p>
+								<pre>
+<code class="language-bash hljs">
+curl<span class="hljs-operator">-s</span>L https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</code>
+</pre>
+<p><strong>Debian 系统。以 root 权限执行下列指令</strong></p>
+<pre>
+<code class="language-bash hljs">
+curl<span class="hljs-operator">-s</span>L https://deb.nodesource.com/setup_4.x | bash -
+apt-get install -y nodejs  
+</code>
+</pre>
+								<hr />
+							</div>
+							<div class="footer clearfix">
+								
+								<div class="pull-left tag-list">
+								<i class="fa fa-folder-open-o"></i>
+								</div>
+							</div>
+						</article>
+						<div class="col-md-12 main-content post tag-about-ghost tag-about-ghost-in-depth tag-zhu-shou-han-shu">
+							<div class="widget">
+								<p>关于作者<a href="#">王赛</a></p>
+								<span class="loaction"><i class="fa fa-home"></i>北京  </span>
+								<span class="website">
+									<i class="fa fa-globe"></i>
+									<a targer="_blank" href="http://www.bootcss.com">个人网站/博客</a>
+								</span>
+								
+							</div>
+						</div>
+					</main>
+					<aside class="col-md-4 side-bar">
+						<div class="widget">
+							<h4 class="title">社区</h4>
+							<div class="content community">
+								<p>qq群：1234568</p>
+								<p>
+									<a href="#">问答社区</a>
+								</p>
+								<p>
+									<a href="#">官网微博</a>
+								</p>
+							</div>
+
+						</div>
+						<div class="widget">
+							<h4 class="title">下载Ghost</h4>
+							<div class="content download">
+								<a href="# " class="btn btn-default btn-block">中文版0.7.4</a>
+							</div>
+
+						</div>
+						<div class="widget">
+							<h4 class="title">标签云</h4>
+							<div class="content tag-cloud">
+								<a href="#">jquery</a>
+								<a href="#">Ghost0.7版本</a>
+								<a href="#">开源</a>
+								<a href="#">助手函数</a>
+								<a href="#">标签云</a>
+								<a href="#">导航</a>
+								<a href="#">自定义页面</a>
+								<a href="#">静态页面</a>
+								<a href="#">Roon.io</a>
+								<a href="#">用户指南</a>
+							</div>
+						</div>
+					</aside>
+					
+				</div>
+			</div>
+		</section>
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="widget">
+							<h4>最新文章</h4>
+							<div class="content recent-psot">
+								<div class="recent-single-psot">
+									<a href="#" class="post-title">Node.js v4 LTS 成为 Ghost 推荐版本</a>
+									<div class="date">2016年7月26日</div>
+								</div>
+								<div class="recent-single-psot">
+									<a href="#" class="post-title">Ghost 桌面版App正式发布 能同时管理多个Ghost博客</a>
+									<div class="date">2016年4月28日</div>
+								</div>
+								<div class="recent-single-psot">
+									<a href="#" class="post-title">位Ubuntu 和 Debian 安装最新版本的Node.js</a>
+									<div class="date">2016年3月23日</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="widget">
+							<h4 class="title">标签云</h4>
+							<div class="content tag-cloud">
+								<a href="#">ghost</a>
+								<a href="#">javascript</a>
+								<a href="#">新版本发布</a>
+								<a href="#">Node.js</a>
+								<a href="#">MySQL</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="widget">
+							<h4 class="title">合作伙伴</h4>
+							<div class="content tag-cloud frend-links">
+								<a href="#">bootstrap中文网</a>
+								<a href="#">开放CDN服务</a>
+								<a href="#">Grunt中文网</a>
+								<a href="#">Glup中文网</a>
+								<a href="#">阿里云</a>
+								<a href="#">又拍云</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a href="javascript:;" class="top">∧</a>
+	</body>
+
+</html>
